@@ -4,6 +4,7 @@ Pertama, mari kita buat direktori proyek baru. Saya sudah menggunakannya gui, da
 
 Kemudian buka terminal cd ke direktori proyek bun inituntuk menginisialisasi proyek
 
+```
 
 PS C:\Users\...\Desktop\Bun\gui> bun init
 
@@ -24,12 +25,15 @@ To get started, run:
 
 PS C:\Users\...\Desktop\Bun\gui>
 
+```
+
 Saya biasa menggunakan pustaka webview dan mengompilasinya menjadi dll agar bun dapat dipanggil. Tanpa diduga, saya menemukan bahwa seorang teman asing dari webview-bun telah mengemas pustaka tersebut, sehingga saya tidak perlu membangun webview sendiri.
 
 Setelah inisialisasi selesai, kami menginstalbun i webview-bun
 
 Mari membuat yang baru ui.htmluntuk menulis antarmuka pengguna perangkat lunak kita
 
+```
 
 <div>
   <h1>Halo, monster kecil</h1>
@@ -63,8 +67,11 @@ Mari membuat yang baru ui.htmluntuk menulis antarmuka pengguna perangkat lunak k
   document.addEventListener('contextmenu', (e) => e.preventDefault());
 </script>
 
+```
+
 Kita masukkan kode pengikatan backend di main.js
 
+```
 
 import { Webview, SizeHint } from "webview-bun";
 // Sematkan html ke dalam file yang dapat dieksekusi terpisah, dan kompilasi tanpa ui.html
@@ -86,7 +93,11 @@ webview.setHTML(html);
 webview.run();
 
 
+```
+
+
 Sekarang kita bisa bun run main.jsmelihat efeknya
+
 
 Apakah kecepatannya sangat cepat? Dimulai dalam hitungan detik (bahkan lebih cepat setelah kompilasi dan pengemasan)
 
@@ -98,13 +109,20 @@ Akhirnya, kami mengkompilasi dan mengemas
 
 -windows-hide-console : Sembunyikan konsol Windows (jika tidak disembunyikan, akan ada jendela hitam besar di belakang perangkat lunak, yang jelek)
 
-TERMINAL
 
+
+TERMINAL
+```
 bun build ./main.js --compile --minify --windows-hide-console --outfile myapp
+```
+
 Setelah dikompilasi, direktori Anda akan memiliki tambahanmyapp.exe
 
 Tentu saja, Anda juga dapat menambahkan ikon ke file yang dapat dieksekusi
 
 Cukup tambahkan ke perintah kompilasi--windows-icon=./icon.ico
 
+
+```
 bun build ./main.js --compile --minify --windows-hide-console --windows-icon=./icon.ico --outfile myapp
+```
