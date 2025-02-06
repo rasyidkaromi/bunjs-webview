@@ -45,7 +45,7 @@ Mari membuat yang baru ui.htmluntuk menulis antarmuka pengguna perangkat lunak k
 </div>
 <div>
   <button id="compute">Compute</button>
-  <span>结果: <span id="computeResult">(not started)</span></span>
+  <span>result: <span id="computeResult">(not started)</span></span>
 </div>
 <script type="module">
   const ui = {};
