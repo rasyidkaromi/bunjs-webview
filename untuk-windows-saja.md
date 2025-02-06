@@ -37,7 +37,7 @@ PS C:\Users\...\Desktop\Bun\gui>
 
 Saya biasa menggunakan pustaka webview dan mengompilasinya menjadi dll agar bun dapat dipanggil. Tanpa diduga, saya menemukan bahwa seorang teman asing dari webview-bun telah mengemas pustaka tersebut, sehingga saya tidak perlu membangun webview sendiri.
 
-Setelah inisialisasi selesai, kami menginstalbun i webview-bun
+Setelah inisialisasi selesai, kami menginstal bun i webview-bun atau npm install webview-bun
 
 Mari membuat yang baru ui.htmluntuk menulis antarmuka pengguna perangkat lunak kita
 
@@ -89,10 +89,10 @@ import html from "./ui.html" with { type: "text" };
 const webview = new Webview(false, { height: 480, width: 640, hint: SizeHint.FIXED });
 
 let counter = 0;
-// Ikat acara tombol front-end (bertambah, berkurang)
+// binding event dari tombol front-end (bertambah, berkurang)
 webview.bind("count", (a) => counter += a);
 
-// Ikat acara tombol front-end (komputasi)
+// binding event dari tombol front-end (compute)
 webview.bind("compute", (a, b) => a + b);
 
 // Title Aplikasi
