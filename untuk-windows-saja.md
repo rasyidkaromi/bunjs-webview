@@ -2,6 +2,14 @@ Menggunakan Bun untuk mengembangkan perangkat lunak desktop yang dapat dieksekus
 
 Pertama, mari kita buat direktori proyek baru. Saya sudah menggunakannya gui, dan Anda dapat menggunakannya sesuai keinginan.
 
+```
+
+Buat PATH -> WEBVIEW_PATH -> di environment variables -> user variables dan system variables
+dimana WEBVIEW_PATH mengarah ke file libwebview.dll -> cnth C:\WEBVIEW_PATH\libwebview.dll
+
+```
+
+
 Kemudian buka terminal cd ke direktori proyek bun inituntuk menginisialisasi proyek
 
 ```
